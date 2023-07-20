@@ -3,8 +3,6 @@ import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import { useProductos } from "../../Hooks/UseProductos";
 
-
-
 // extraer del local storage el id del cliente
 const cliente = JSON.parse(localStorage.getItem('user'));
 

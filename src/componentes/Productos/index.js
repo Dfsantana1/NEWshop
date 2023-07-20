@@ -3,12 +3,11 @@ import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import { useProductos } from "../../Hooks/UseProductos";
 
-import { serverBackEndDireccion } from '../../rutas/serverback';
+
 
 // extraer del local storage el id del cliente
 const cliente = JSON.parse(localStorage.getItem('user'));
 
-const URL = `${serverBackEndDireccion()}cart/add`;
 
 export const ProductosLista = () => {
 	// Obtener la lista de productos utilizando el hook useProductos
@@ -30,7 +29,7 @@ export const ProductosLista = () => {
             };
             console.log(data);
 
-            const response = await fetch(URL, {
+            const response = await fetch("http//:localhost", {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',

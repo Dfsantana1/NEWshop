@@ -27,7 +27,7 @@ export const ProductosLista = () => {
             };
             console.log(data);
 
-            const response = await fetch("http//:localhost", {
+            const response = await fetch("https://bootcamp-v13j.onrender.com/cart/add   ", {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',

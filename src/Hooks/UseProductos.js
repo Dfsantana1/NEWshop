@@ -10,7 +10,7 @@ function useProductos() {
     const fetchProductos = async () => {
       try {
         // Realizar la petición GET a la API
-        const response = await fetch("https://bootcamp-v13j.onrender.com/productos");
+        const response = await fetch("https://bootcamp-v13j.onrender.com/products");
         // Obtener los datos de la respuesta
         const data = await response.json();
         // Actualizar el estado con los productos obtenidos

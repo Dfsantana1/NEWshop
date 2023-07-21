@@ -11,6 +11,7 @@ function useProductos() {
       try {
         // Realizar la petición GET a la API
         const response = await fetch("https://bootcamp-v13j.onrender.com/products");
+        console.log(response);
         // Obtener los datos de la respuesta
         const data = await response.json();
         // Actualizar el estado con los productos obtenidos

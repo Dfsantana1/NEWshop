@@ -5,12 +5,12 @@ import axios from 'axios';
 const Cart = () => {
   const [items, setItems] = useState([]);
   const clienteId = JSON.parse(localStorage.getItem('user'))?.ID_Usuario;
-  const URL = `http://localhost:5000/cart/add`;
+  const URL = `https://bootcamp-v13j.onrender.com/cart/add`;
   useEffect(() => {
     const fetchCartItems = async () => {
       try {
         if (clienteId) {
-          const response = await fetch(`http://localhost:5000/carrito/${clienteId}`);
+          const response = await fetch(`https://bootcamp-v13j.onrender.com/carrito/${clienteId}`);
           const data = await response.json();
 
           // Asegurarse de que la respuesta contenga la propiedad 'productos'
@@ -88,7 +88,7 @@ const Cart = () => {
     };
 
     try {
-      const res = await axios.post('http://localhost:5000/checkout', formData);
+      const res = await axios.post('https://bootcamp-v13j.onrender.com/checkout', formData);
       if (res.data.result) {
         window.location.href = res.data.result.url;
       }
@@ -139,7 +139,7 @@ const Cart = () => {
     const productoId = items[index].producto.ID_Producto;
     console.log(productoId);
     try {
-      await axios.delete(`http://localhost:5000/carrito/${clienteId}/${productoId}`);
+      await axios.delete(`https://bootcamp-v13j.onrender.com/carrito/${clienteId}/${productoId}`);
       const updatedItems = [...items];
       updatedItems.splice(index, 1);
       setItems(updatedItems);

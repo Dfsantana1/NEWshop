@@ -8,7 +8,7 @@ import { BsFillHandThumbsUpFill } from 'react-icons/bs';
 //funcion que extrae la data del localstorage y la guarda en un objeto a la ruta de la api
  function postOrder(){
     const clienteId = JSON.parse(localStorage.getItem('user'));
-    const URL = `http://localhost:5000/success`;
+    const URL = `https://bootcamp-v13j.onrender.com/success`;
     const data = {
         email: clienteId.Email,
   

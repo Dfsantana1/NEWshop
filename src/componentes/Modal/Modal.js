@@ -17,7 +17,7 @@ const Modal = ({ selectedProduct, setIsModalOpen }) => {
 
   const handleApplyChanges = () => {
     console.log('Applying changes to product:', productData);
-    fetch(`http://localhost:5000/products`, {
+    fetch(`https://bootcamp-v13j.onrender.com/products`, {
       method: 'PUT',
       headers: {
         'Content-Type': 'application/json'

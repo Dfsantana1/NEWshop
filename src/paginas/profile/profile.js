@@ -4,7 +4,7 @@ import "./profile.css";
 import EditProduct from '../../componentes/Edit/Edit'
 
 
-const URL =`http://localhost:5000/edit`;
+const URL =`https://bootcamp-v13j.onrender.com/edit`;
 const usuario = JSON.parse(localStorage.getItem("user"));
 
 

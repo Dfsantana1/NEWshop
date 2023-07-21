@@ -1,9 +1,4 @@
 import { useState, useEffect } from 'react';
-import { serverBackEndDireccion } from '../rutas/serverback';
-
-// URL de la API para obtener los productos
-const URL =`${serverBackEndDireccion()}products/`;
-
 // Hook personalizado para obtener los productos
 function useProductos() {
   // Estado para almacenar los productos
@@ -15,7 +10,7 @@ function useProductos() {
     const fetchProductos = async () => {
       try {
         // Realizar la petición GET a la API
-        const response = await fetch(URL);
+        const response = await fetch("http://localhost:5000/productos");
         // Obtener los datos de la respuesta
         const data = await response.json();
         // Actualizar el estado con los productos obtenidos

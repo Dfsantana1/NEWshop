@@ -1,10 +1,8 @@
 import React, { useState } from "react";
 import axios from "axios";
 import "./registro.css";
-import { serverBackEndDireccion } from '../../rutas/serverback';
 import { useNavigate } from 'react-router-dom';
 // URL de la API para el registro
-const URL =`${serverBackEndDireccion()}register`;
 
 const RegistrationForm = () => {
   // Estados para los campos del formulario y mensajes de éxito y error
@@ -50,7 +48,7 @@ const RegistrationForm = () => {
     e.preventDefault();
 
     axios
-      .post(URL, {
+      .post("http://localhost:5000/register", {
         Name: name,
         Email: email,
         Lastname: lastname,

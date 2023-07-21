@@ -30,7 +30,7 @@ const LoginForm = () => {
         Password: password
       };
 
-      const response = await fetch(URL, {
+      const response = await fetch("http://localhost:500", {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json'

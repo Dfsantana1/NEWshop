@@ -1,11 +1,10 @@
 import React, { useState } from "react";
 import axios from "axios";
 import "./profile.css";
-import { serverBackEndDireccion } from '../../rutas/serverback';
 import EditProduct from '../../componentes/Edit/Edit'
 
 
-const URL =`${serverBackEndDireccion()}edit`;
+const URL =`http://localhost:5000/edit`;
 const usuario = JSON.parse(localStorage.getItem("user"));
 
 

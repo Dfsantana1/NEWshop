@@ -2,11 +2,10 @@ import React, { useState, useEffect } from 'react';
 import './cart.css';
 import ImageEmpty from '../../acces/pngwing.com.png';
 import axios from 'axios';
-import { serverBackEndDireccion } from '../../rutas/serverback';
 const Cart = () => {
   const [items, setItems] = useState([]);
   const clienteId = JSON.parse(localStorage.getItem('user'))?.ID_Usuario;
-  const URL = `${serverBackEndDireccion()}cart/add`;
+  const URL = `http://localhost:5000/cart/add`;
   useEffect(() => {
     const fetchCartItems = async () => {
       try {
